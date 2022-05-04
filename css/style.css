@@ -1,0 +1,488 @@
+body{
+    background-color: #E5E5E5;;
+    overflow-x: hidden;
+
+}
+.topo .bordaTopo{
+  
+    height: 22px;
+    border-left: 1px solid rgba(12, 9, 9, 0.077);
+    
+}
+.topo{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    width: 1366px;
+    height: 54px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    z-index: 1;
+ 
+}
+.topo ion-icon{
+    font-size: 35px;
+}
+.topo div{
+    display: flex; 
+    align-items: center;
+    padding-right: 12px;
+}
+
+.barra-acao{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.barra-pesquisa{
+    position: absolute;
+    width: 215px;
+    height: 28px;
+    left: 575px;
+    top: 13px;
+    justify-content: center;
+
+    background: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.conteudo{
+    display: flex;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    height: 88px;
+    width: 100%;
+}
+
+.feed{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+}
+
+.stories{
+    display: flex;
+    position: absolute;
+    width: 614px;
+    height: 118px;
+    left: 215px;
+    top: 88px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding-left: 18px;
+   
+}
+.storie-postado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
+
+
+}
+.storie-postado p{
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;  
+    text-overflow:    ellipsis;
+}
+.stories .storie img{
+    
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+}
+.stories .storie p{
+    
+    /* width: 100px;
+    height: 100px; */
+    margin: none;
+}
+
+.storie{
+    width: 56px;
+    height: 56px;
+    margin-top: 5px;
+    margin-bottom: 5px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid rgb(219, 47, 118);
+    border-radius: 50%;
+    
+}
+.seta{
+    display: flex;
+    position: absolute;
+    top: 40%;
+    right: 1%;
+    font-size: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 5px 5px #aaaaaa;
+    background: #FFFFFF;
+
+}
+.recomendados{
+    width: 293px;
+}
+
+.caixa-recomendados{
+    position: absolute;
+    left: 858px;
+    top: 111px;
+    border-radius: 12px;
+}
+
+.topo-recomendados{
+    display: flex;
+    align-items: center;
+   
+}
+
+.topo-recomendados .fundo-imagem img{
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+}
+.topo-recomendados .paragrafor-recomendados p {
+    margin-top: 2px;
+    height: 1px;
+    margin-left: 15px;
+}
+.topo-recomendados .paragrafor-recomendados{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.seguidor-recomendado, .lista-recomendados{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 10px;
+  
+}
+.seguidor-recomendado p{
+    margin-right: 100px;
+    left: 858px;
+}
+.lista-recomendados{
+      width: 280px;
+}
+
+.lista-recomendados img{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    left: 858px;
+    top: 223px;
+}
+.descricao-recomendados{
+    position: absolute;
+    width: 300px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+  
+    align-items: center;
+
+    color: #C7C7C7;
+}
+.postagem{
+    position: absolute;
+    width: 614px;
+    height: 500px;
+    left: 215px;
+    top: 230px;
+
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.postagemTopo{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: #FFFFFF;
+}
+.postagemTopo div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 17px;
+    
+    
+}
+.postagemTopo div p{
+    margin-left: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #262626;
+
+}
+.postagemTopo div img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    
+}
+.postagemImagem{
+    overflow: hidden;
+    
+}
+.postagemImagem img{
+    width: 614px;
+    height: 614px;
+
+}
+.publicacao{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 20px;
+    width: 614px;
+    margin-bottom: 60px;
+}
+.postagemRodaPe{
+    display: block;
+    background: #FFFFFF;
+    position: relative;
+    bottom: 10px;
+
+}
+.teste{
+
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    height: 30px;
+}
+.postagemRodaPe .teste .postagemInteracao ion-icon {
+    margin-left: 10px;
+    margin: 17px 13px;
+}
+
+.postagemRodaPe .teste .postagemInformativo {
+    margin: 17px 13px;
+}
+.postagemCurtida{
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    margin:12px 185px 13px 17px  ;
+    height: 10px;
+}
+
+.postagemCurtida p{
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 5px;
+
+    color: #000000;
+
+}
+.link{
+    color: #139EF2;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    cursor: pointer;
+}
+.curtidoPor img{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+.fundo-imagem{
+    background-image: url(imagens/stories_background.jpg);
+    
+}
+
+div .topo-celular{
+    display: none;
+}
+
+div .rodaPeCelular{
+    display: none;
+}
+
+.cor1{
+    background: #FFFFFF;
+}
+
+.cor2{
+    color: #8E8E8E;
+}
+
+@media (max-width: 935px){
+
+    .caixa-recomendados{
+        display: none;
+    }
+    .recomendados{
+        display: none;
+    }
+
+    
+    .topo{
+        display: flex;
+        position: fixed;
+        align-items: center;
+        width: 100%;
+        height: 54px;
+        left: 0px;
+        top: 0px;
+        background: #FFFFFF;
+        border: 1px solid #DBDBDB;
+        z-index: 1;
+     
+    }
+
+   .barra-pesquisa{
+        position: static;
+        width: 215px;
+        height: 28px;
+        left: 575px;
+        top: 13px;
+        justify-content: center;
+        background: #FAFAFA;
+        border: 1px solid #DBDBDB;
+        box-sizing: border-box;
+        border-radius: 3px;
+
+   }
+    /* .postagem{
+        display: none;
+    } */
+
+    .stories{
+        display: flex;
+        position: static;
+        width: 614px;
+        height: 118px;
+        top: 88px;
+        overflow: hidden;
+        background: #FFFFFF;
+        border: 1px solid #DBDBDB;
+        box-sizing: border-box;
+        border-radius: 3px;
+        margin: 88px auto 24px auto;
+       
+    }
+    
+    .postagem{
+        position: static;
+        width: 614px;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+
+        background: #FFFFFF;
+        border: 1px solid #DBDBDB;
+        box-sizing: border-box;
+        border-radius: 3px;
+    }
+    .seta{
+        display: flex;
+        position: relative;
+        right:225px;
+        top: 40%;
+        font-size: 20px;
+        border-radius: 12px;
+        box-shadow: 2px 5px 5px #aaaaaa;
+        background: #FFFFFF;
+        width: 26px;
+        height: 22px;
+    
+    }
+
+}
+
+@media (max-width: 614px){
+
+    body{
+        background-color: #E5E5E5;
+    }
+    div .bordaTopo{
+        display: none;
+    }
+    .seta{
+        display: none;
+    }
+
+    div .apagar-topo-desktop{
+        display: none;
+    }
+
+    div .topo-celular{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    div .barra-pesquisa{
+        display: none;
+    }
+
+    .stories{
+        background-color: rgba(229, 229, 229, 1);
+        border: none;
+    }
+    div .rodaPeCelular{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 54px;
+        left: 0px;
+        background: #FFFFFF;
+        border: 1px solid #DBDBDB;
+        z-index: 1;
+    }
+    div .feed{
+        margin-bottom: 54px;
+        padding-bottom: 56px;
+    }
+
+}
+
+/* consertar bug com a imagem do storie e tambe ma barra fixa no modelo do celular */
