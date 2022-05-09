@@ -1,6 +1,7 @@
 
 import Storie from './Storie';
 import Sidebar from './Sidebar';
+import { useState } from 'react';
 
 export default function Corpo() {
 
@@ -38,19 +39,42 @@ function Posts() {
         }
 
     ]
+    
+    const [isClicked, setIsClicked] = useState(false);
+
     return (
         <div class="posts">
-            {posts.map((object) => (
-                <div class="post">
+            {posts.map((object, index) => (
+                
+                <Post key={index} img = {object.img} name={object.name} iconLike={object.iconLike} userLike={object.userLike} qtd ={object.qtd} />
+               
+            ))}
 
-                    <Topo img={object.img} name={object.name} />
+        </div>
+    )
 
-                    <Conteudo img={object.img} />
+}
+
+function Post(props){
+
+
+    const {img, name, iconLike, userLike, qtd} = props;
+
+    const [isClicked, setIsClicked ] = useState();
+
+    return (
+        <div class="post">
+
+                    <Topo img={img} name={name} />
+
+                    <Conteudo isClicked={isClicked} setIsClicked={setIsClicked} img={img} />
 
                     <div class="fundo">
                         <div class="acoes">
                             <div>
-                                <ion-icon name="heart-outline"></ion-icon>
+                                <ion-icon id = {isClicked ? "clicado": ""} 
+                                        name={ isClicked ? "heart": "heart-outline"}></ion-icon>
+                                        
                                 <ion-icon name="chatbubble-outline"></ion-icon>
                                 <ion-icon name="paper-plane-outline"></ion-icon>
                             </div>
@@ -59,26 +83,22 @@ function Posts() {
                             </div>
                         </div>
 
-                        <Curtidas iconLike={object.iconLike} userLike={object.userLike} qtd ={object.qtd}/>
+                        <Curtidas iconLike={iconLike} userLike={userLike} qtd ={qtd}/>
 
                     </div>
 
                 </div>
-
-            ))}
-
-        </div>
-    )
-
+    );
 }
 
 function Conteudo(props) {
 
-    const { img } = props;
+    const { img, isClicked, setIsClicked } = props;
 
     return (
-        <div class="conteudo">
-            <img src={img} />
+        <div onClick={ ()=>{ setIsClicked(!isClicked)
+        } } class="conteudo">
+            <img  src={img} />
         </div>
     )
 
