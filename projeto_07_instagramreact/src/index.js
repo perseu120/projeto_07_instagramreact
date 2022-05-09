@@ -1,12 +1,15 @@
 import ReactDOM from 'react-dom';
 import Navbar from './Navbar';
 import Corpo from './Corpo';
+import Fundomobile from './Fundomobile';
 
+ 
 function App() {
     return (
         <div>
             <Navbar />
-            <Corpo />
+            <Corpo />    
+            <Fundomobile />
         </div>
     )
 }

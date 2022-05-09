@@ -1,12 +1,19 @@
+
 import Storie from './Storie';
+import Sidebar from './Sidebar';
 
 export default function Corpo() {
 
     return (
-        <div class="esquerda">
-            <Storie />
-            <Posts />
+        <div class="corpo">
+            <div class="esquerda">
+                <Storie />
+                <Posts />
+
+            </div>
+            <Sidebar />
         </div>
+
     )
 }
 
@@ -35,18 +42,11 @@ function Posts() {
         <div class="posts">
             {posts.map((object) => (
                 <div class="post">
-                    <div class="topo">
-                        <div class="usuario">
-                            <img src={object.img} />
-                            {object.name}
-                        </div>
-                        <div class="acoes">
-                            <ion-icon name="ellipsis-horizontal"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="conteudo">
-                        <img src={object.img} />
-                    </div>
+
+                    <Topo img={object.img} name={object.name} />
+
+                    <Conteudo img={object.img} />
+
                     <div class="fundo">
                         <div class="acoes">
                             <div>
@@ -59,12 +59,8 @@ function Posts() {
                             </div>
                         </div>
 
-                        <div class="curtidas">
-                            <img src={object.iconLike} />
-                            <div class="texto">
-                                Curtido por <strong>{object.userLike}</strong> e <strong>outras {object.qtd} pessoas</strong>
-                            </div>
-                        </div>
+                        <Curtidas iconLike={object.iconLike} userLike={object.userLike} qtd ={object.qtd}/>
+
                     </div>
 
                 </div>
@@ -76,44 +72,47 @@ function Posts() {
 
 }
 
-    // <div class="esquerda">
+function Conteudo(props) {
 
+    const { img } = props;
 
+    return (
+        <div class="conteudo">
+            <img src={img} />
+        </div>
+    )
 
+}
 
-    //     <div class="post">
-    //         <div class="topo">
-    //             <div class="usuario">
-    //                 <img src="assets/img/barked.svg" />
-    //                 barked
-    //             </div>
-    //             <div class="acoes">
-    //                 <ion-icon name="ellipsis-horizontal"></ion-icon>
-    //             </div>
-    //         </div>
+function Topo(props) {
 
-    //         <div class="conteudo">
-    //             <img src="assets/img/dog.svg" />
-    //         </div>
+    const { img, name } = props;
 
-    //         <div class="fundo">
-    //             <div class="acoes">
-    //                 <div>
-    //                     <ion-icon name="heart-outline"></ion-icon>
-    //                     <ion-icon name="chatbubble-outline"></ion-icon>
-    //                     <ion-icon name="paper-plane-outline"></ion-icon>
-    //                 </div>
-    //                 <div>
-    //                     <ion-icon name="bookmark-outline"></ion-icon>
-    //                 </div>
-    //             </div>
+    return (
+        <div class="topo">
+            <div class="usuario">
+                <img src={img} />
+                {name}
+            </div>
+            <div class="acoes">
+                <ion-icon name="ellipsis-horizontal"></ion-icon>
+            </div>
+        </div>
+    )
 
-    //             <div class="curtidas">
-    //                 <img src="assets/img/adorable_animals.svg" />
-    //                 <div class="texto">
-    //                     Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
+}
+
+function Curtidas(props) {
+
+    const { iconLike, userLike, qtd } = props;
+
+    return (
+        <div class="curtidas">
+            <img src={iconLike} />
+            <div class="texto">
+                Curtido por <strong>{userLike}</strong> e <strong>outras {qtd} pessoas</strong>
+            </div>
+        </div>
+    )
+
+}
